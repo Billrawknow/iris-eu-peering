@@ -1,0 +1,373 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": "ix:9003",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.5755,
+     48.1374
+    ]
+   },
+   "properties": {
+    "node_id": "ix:9003",
+    "node_type": "ix_city",
+    "ix_id": 9003,
+    "ix_name": "SYNTH-IX-MUC",
+    "ix_country": "DE",
+    "fac_id": null,
+    "fac_name": null,
+    "node_city": "Munich",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_city",
+    "coord_accuracy": "city",
+    "coord_accuracy_m": 15000,
+    "geocode_osm_ref": "synthetic/4",
+    "quality_flags": [
+     "no_facility_link",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ix/9003",
+    "source_record_hash": "08d2f3644d1f0bbccd8e77c3a97372204a17ccbaeb2e42a094d5172ecc6750ed"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ix:9007",
+   "geometry": null,
+   "properties": {
+    "node_id": "ix:9007",
+    "node_type": "ix_city",
+    "ix_id": 9007,
+    "ix_name": "SYNTH-IX-NOWHERE",
+    "ix_country": "DE",
+    "fac_id": null,
+    "fac_name": null,
+    "node_city": "Synthville",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "none",
+    "coord_accuracy": "unknown",
+    "coord_accuracy_m": null,
+    "geocode_osm_ref": null,
+    "quality_flags": [
+     "no_facility_link",
+     "geocode_offline_miss:city",
+     "unlocated"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ix/9007",
+    "source_record_hash": "c9159688355af436aa86547393038edabec8317f07a1ad15911a260742f96836"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8001",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7356,
+     50.1188
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8001",
+    "node_type": "ix_facility",
+    "ix_id": 9001,
+    "ix_name": "SYNTH-IX-FRA",
+    "ix_country": "DE",
+    "fac_id": 7001,
+    "fac_name": "SYNTH-DC Frankfurt East",
+    "node_city": "Frankfurt",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "peeringdb_facility",
+    "coord_accuracy": "facility_reported",
+    "coord_accuracy_m": 100,
+    "geocode_osm_ref": null,
+    "quality_flags": [],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8001",
+    "source_record_hash": "8e654d934767eca4ed482f727f6a0517bfbc0d4c7c1dbbed68db6ab924342550"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8002",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.642,
+     50.099
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8002",
+    "node_type": "ix_facility",
+    "ix_id": 9001,
+    "ix_name": "SYNTH-IX-FRA",
+    "ix_country": "DE",
+    "fac_id": 7002,
+    "fac_name": "SYNTH-DC Frankfurt West",
+    "node_city": "Frankfurt",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "peeringdb_facility",
+    "coord_accuracy": "facility_reported",
+    "coord_accuracy_m": 100,
+    "geocode_osm_ref": null,
+    "quality_flags": [],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8002",
+    "source_record_hash": "869ae73c13c2a2c989c0403ce9f3a834cdc43acb7686855645194d1efd67a993"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8003",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.69,
+     50.1302
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8003",
+    "node_type": "ix_facility",
+    "ix_id": 9001,
+    "ix_name": "SYNTH-IX-FRA",
+    "ix_country": "DE",
+    "fac_id": 7003,
+    "fac_name": "SYNTH-DC Frankfurt North",
+    "node_city": "Frankfurt",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_address",
+    "coord_accuracy": "building",
+    "coord_accuracy_m": 50,
+    "geocode_osm_ref": "synthetic/1",
+    "quality_flags": [
+     "source_coordinates_missing",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8003",
+    "source_record_hash": "3e277b24baef8b5bd405ed846743921802ddda8cb5221132c9a2b2d5dee90399"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8004",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.39,
+     52.507
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8004",
+    "node_type": "ix_facility",
+    "ix_id": 9002,
+    "ix_name": "SYNTH-IX-BER",
+    "ix_country": "DE",
+    "fac_id": 7004,
+    "fac_name": "SYNTH-DC Berlin",
+    "node_city": "Berlin",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_address",
+    "coord_accuracy": "building",
+    "coord_accuracy_m": 50,
+    "geocode_osm_ref": "synthetic/2",
+    "quality_flags": [
+     "outside_country_bbox",
+     "lat_lon_swap_suspected",
+     "source_coordinates_rejected",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8004",
+    "source_record_hash": "54d1fc08ac60a89bad0ba9018e1fd988ddcc5c54d56a93091a690396e55a7555"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8005",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9937,
+     53.5511
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8005",
+    "node_type": "ix_facility",
+    "ix_id": 9004,
+    "ix_name": "SYNTH-IX-HAM",
+    "ix_country": "DE",
+    "fac_id": 7005,
+    "fac_name": "SYNTH-DC Hamburg",
+    "node_city": "Hamburg",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_city",
+    "coord_accuracy": "city",
+    "coord_accuracy_m": 15000,
+    "geocode_osm_ref": "synthetic/5",
+    "quality_flags": [
+     "coordinates_null_island",
+     "source_coordinates_rejected",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8005",
+    "source_record_hash": "c031120013756be5ea887ce9f48ea691c2e1b28d9a7bf3ec115265900567e989"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8006",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     4.94,
+     52.35
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8006",
+    "node_type": "ix_facility",
+    "ix_id": 9005,
+    "ix_name": "SYNTH-IX-DUS",
+    "ix_country": "DE",
+    "fac_id": 7006,
+    "fac_name": "SYNTH-DC Amsterdam",
+    "node_city": "Amsterdam",
+    "node_country": "NL",
+    "cross_border": true,
+    "native_crs": "EPSG:4326",
+    "coord_source": "peeringdb_facility",
+    "coord_accuracy": "facility_reported",
+    "coord_accuracy_m": 100,
+    "geocode_osm_ref": null,
+    "quality_flags": [
+     "cross_border_facility"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8006",
+    "source_record_hash": "0b88fc6792fbba7daaed14b053790a89d5eb7906771f262e5fbc6bb0ddbb3580"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8007",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.7735,
+     51.2277
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8007",
+    "node_type": "ix_facility",
+    "ix_id": 9005,
+    "ix_name": "SYNTH-IX-DUS",
+    "ix_country": "DE",
+    "fac_id": 7999,
+    "fac_name": "SYNTH-DC Dusseldorf Gone",
+    "node_city": "Dusseldorf",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_city",
+    "coord_accuracy": "city",
+    "coord_accuracy_m": 15000,
+    "geocode_osm_ref": "synthetic/6",
+    "quality_flags": [
+     "facility_record_missing",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8007",
+    "source_record_hash": "f4e3af818dd68b44a778066c689bb3adcb92dbc4a6435a8e8776b6730d70e588"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8008",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.3731,
+     51.3397
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8008",
+    "node_type": "ix_facility",
+    "ix_id": 9006,
+    "ix_name": "SYNTH-IX-LEJ",
+    "ix_country": "DE",
+    "fac_id": 7007,
+    "fac_name": "SYNTH-DC Leipzig",
+    "node_city": "Leipzig",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_city",
+    "coord_accuracy": "city",
+    "coord_accuracy_m": 15000,
+    "geocode_osm_ref": "synthetic/7",
+    "quality_flags": [
+     "coordinates_partial",
+     "source_coordinates_rejected",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8008",
+    "source_record_hash": "043b5bd4064239ca2415cc4a89bc5de0e8d92ba84aab4e395d57e2e3a5e212a4"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "ixfac:8009",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1829,
+     48.7758
+    ]
+   },
+   "properties": {
+    "node_id": "ixfac:8009",
+    "node_type": "ix_facility",
+    "ix_id": 9008,
+    "ix_name": "SYNTH-IX-STR",
+    "ix_country": "DE",
+    "fac_id": 7008,
+    "fac_name": "SYNTH-DC Stuttgart",
+    "node_city": "Stuttgart",
+    "node_country": "DE",
+    "cross_border": false,
+    "native_crs": "EPSG:4326",
+    "coord_source": "geocoded_city",
+    "coord_accuracy": "city",
+    "coord_accuracy_m": 15000,
+    "geocode_osm_ref": "synthetic/3",
+    "quality_flags": [
+     "outside_country_bbox",
+     "source_coordinates_rejected",
+     "geocode_miss:address",
+     "geocoded"
+    ],
+    "source_url": "https://www.peeringdb.com/api/ixfac/8009",
+    "source_record_hash": "c6babe2fd079741f514828f703ab2d054ac0bf802807b8b47be704adbb74e7c5"
+   }
+  }
+ ]
+}

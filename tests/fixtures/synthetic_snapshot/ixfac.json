@@ -1,0 +1,144 @@
+[
+ {
+  "body": {
+   "data": [
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7001,
+     "id": 8001,
+     "ix_id": 9001,
+     "name": "SYNTH-DC Frankfurt East",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7002,
+     "id": 8002,
+     "ix_id": 9001,
+     "name": "SYNTH-DC Frankfurt West",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7003,
+     "id": 8003,
+     "ix_id": 9001,
+     "name": "SYNTH-DC Frankfurt North",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7001,
+     "id": 8099,
+     "ix_id": 9001,
+     "name": "SYNTH-DC Frankfurt East",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Berlin",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7004,
+     "id": 8004,
+     "ix_id": 9002,
+     "name": "SYNTH-DC Berlin",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Hamburg",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7005,
+     "id": 8005,
+     "ix_id": 9004,
+     "name": "SYNTH-DC Hamburg",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Amsterdam",
+     "country": "NL",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7006,
+     "id": 8006,
+     "ix_id": 9005,
+     "name": "SYNTH-DC Amsterdam",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Dusseldorf",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7999,
+     "id": 8007,
+     "ix_id": 9005,
+     "name": "SYNTH-DC Dusseldorf Gone",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Leipzig",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7007,
+     "id": 8008,
+     "ix_id": 9006,
+     "name": "SYNTH-DC Leipzig",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Stuttgart",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7008,
+     "id": 8009,
+     "ix_id": 9008,
+     "name": "SYNTH-DC Stuttgart",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7001,
+     "id": 8050,
+     "ix_id": 9999,
+     "name": "SYNTH-DC Frankfurt East",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    },
+    {
+     "city": "Frankfurt",
+     "country": "DE",
+     "created": "2024-01-15T09:00:00Z",
+     "fac_id": 7001,
+     "id": 8051,
+     "ix_id": null,
+     "name": "SYNTH-broken link",
+     "status": "ok",
+     "updated": "2025-03-01T12:30:00Z"
+    }
+   ],
+   "meta": {}
+  },
+  "fetched_at": "2026-10-28T00:00:01+00:00",
+  "http_status": 200,
+  "url": "https://www.peeringdb.com/api/ixfac?ix_id__in=9001,9002"
+ }
+]

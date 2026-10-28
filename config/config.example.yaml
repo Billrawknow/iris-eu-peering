@@ -1,0 +1,38 @@
+# Example configuration for iris-peering. Copy to config/config.yaml and adjust.
+# Secrets are NEVER read from this file: PEERINGDB_API_KEY and DATABASE_URL come
+# from the environment (see .env.example).
+
+source:
+  base_url: https://www.peeringdb.com/api
+  # Task endpoint is /api/ix?country=DE. Add more ISO-3166 alpha-2 codes to
+  # widen the scope to continental Europe, e.g. [DE, NL, FR, AT, CH, PL].
+  countries: [DE]
+  # Alternative to `countries`: fetch every IX whose PeeringDB
+  # region_continent matches (e.g. "Europe"). Leave null to use `countries`.
+  region_continent: null
+  batch_size: 100          # ids per ixfac/fac request (keeps URLs short)
+  timeout_s: 30
+  max_retries: 5
+  backoff_s: 2.0           # exponential base; Retry-After is honoured on 429
+  user_agent: "iris-eu-peering/0.1 (+https://github.com/Billrawknow/iris-eu-peering)"
+
+geocoding:
+  # nominatim -> OSM Nominatim, only for locations PeeringDB did not supply.
+  # none      -> never geocode; such nodes stay unlocated and are reported.
+  provider: nominatim
+  base_url: https://nominatim.openstreetmap.org
+  # Nominatim usage policy: max 1 request/second, identify yourself, cache results.
+  min_interval_s: 1.1
+  contact_email: null      # set via NOMINATIM_EMAIL env var instead of committing it
+  cache_path: data/geocode_cache.json
+  # Reject geocodes coarser than this Nominatim place_rank (12 ~ state level).
+  min_place_rank: 13
+
+storage:
+  # Staging only. The loader refuses any schema that is not iris_staging*.
+  schema: iris_staging
+  table: peeringdb_ix_nodes
+
+paths:
+  snapshot_dir: data/snapshots   # raw API responses + sha256 manifest per run
+  report_dir: data/reports       # quality_report.json/.md + exported nodes

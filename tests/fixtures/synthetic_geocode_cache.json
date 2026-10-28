@@ -1,0 +1,70 @@
+{
+ "_about": "SYNTHETIC test fixture - not Nominatim output.",
+ "licence": "n/a (synthetic)",
+ "entries": {
+  "{\"city\": \"Berlin\", \"country\": \"DE\", \"kind\": \"address\", \"postalcode\": \"10001\", \"street\": \"Beispielweg 2\"}": {
+   "lat": 52.507,
+   "lon": 13.39,
+   "place_rank": 30,
+   "osm_ref": "synthetic/2",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Dusseldorf\", \"country\": \"DE\", \"kind\": \"city\"}": {
+   "lat": 51.2277,
+   "lon": 6.7735,
+   "place_rank": 16,
+   "osm_ref": "synthetic/6",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Frankfurt\", \"country\": \"DE\", \"kind\": \"address\", \"postalcode\": \"60001\", \"street\": \"Synthstrasse 1\"}": {
+   "lat": 50.1302,
+   "lon": 8.69,
+   "place_rank": 30,
+   "osm_ref": "synthetic/1",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Hamburg\", \"country\": \"DE\", \"kind\": \"city\"}": {
+   "lat": 53.5511,
+   "lon": 9.9937,
+   "place_rank": 16,
+   "osm_ref": "synthetic/5",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Leipzig\", \"country\": \"DE\", \"kind\": \"city\"}": {
+   "lat": 51.3397,
+   "lon": 12.3731,
+   "place_rank": 16,
+   "osm_ref": "synthetic/7",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Munich\", \"country\": \"DE\", \"kind\": \"city\"}": {
+   "lat": 48.1374,
+   "lon": 11.5755,
+   "place_rank": 16,
+   "osm_ref": "synthetic/4",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  },
+  "{\"city\": \"Stuttgart\", \"country\": \"DE\", \"kind\": \"address\", \"postalcode\": \"70001\", \"street\": \"Musterallee 3\"}": null,
+  "{\"city\": \"Stuttgart\", \"country\": \"DE\", \"kind\": \"city\"}": {
+   "lat": 48.7758,
+   "lon": 9.1829,
+   "place_rank": 16,
+   "osm_ref": "synthetic/3",
+   "display_name": "SYNTHETIC FIXTURE",
+   "retrieved_at": "2026-10-28T00:00:00+00:00",
+   "provider": "synthetic-fixture"
+  }
+ }
+}

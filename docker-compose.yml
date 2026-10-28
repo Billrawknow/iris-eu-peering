@@ -1,0 +1,62 @@
+# Isolated local stack: PostGIS (staging only) + the ingestion job.
+#   cp .env.example .env            # then edit
+#   docker compose up -d postgis
+#   docker compose run --rm ingest                        # live PeeringDB run (DE)
+#   docker compose run --rm ingest run --countries DE,NL,FR,AT,CH --strict
+#   docker compose --profile demo run --rm demo           # offline, synthetic fixture
+#   docker compose --profile test run --rm tests          # full test suite incl. PostGIS
+
+name: iris-eu-peering
+
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-iris}
+      POSTGRES_USER: ${POSTGRES_USER:-iris_staging_writer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:5434:5432"   # 5434 avoids clashing with the base repo's 5433
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  ingest:
+    build: { context: ., target: runtime }
+    image: iris-eu-peering:0.1.0
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-iris_staging_writer}:${POSTGRES_PASSWORD}@postgis:5432/${POSTGRES_DB:-iris}
+    depends_on:
+      postgis: { condition: service_healthy }
+    volumes:
+      - ./data:/app/data          # snapshots, geocode cache, reports persist on the host
+      - ./config:/app/config:ro
+
+  demo:
+    profiles: [demo]
+    build: { context: ., target: test }
+    image: iris-eu-peering:0.1.0-test
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-iris_staging_writer}:${POSTGRES_PASSWORD}@postgis:5432/${POSTGRES_DB:-iris}
+    depends_on:
+      postgis: { condition: service_healthy }
+    entrypoint: ["iris-peering", "--config", "tests/fixtures/demo_config.yaml"]
+    command: ["run", "--snapshot", "tests/fixtures/synthetic_snapshot", "--offline", "--strict"]
+
+  tests:
+    profiles: [test]
+    build: { context: ., target: test }
+    image: iris-eu-peering:0.1.0-test
+    environment:
+      IRIS_TEST_DATABASE_URL: postgresql://${POSTGRES_USER:-iris_staging_writer}:${POSTGRES_PASSWORD}@postgis:5432/${POSTGRES_DB:-iris}
+    depends_on:
+      postgis: { condition: service_healthy }
+
+volumes:
+  pgdata:

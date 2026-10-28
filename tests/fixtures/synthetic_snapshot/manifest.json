@@ -1,0 +1,16 @@
+{
+ "files": {
+  "fac.json": "13e9f2cea57922a1abe5bf990d2587517ecdc083bf2e7e37ccd25d034758b8c4",
+  "ix.json": "d0cec563d180170f09fec9fd7b140cfb6da39ca77b0e72a29769f3ddf8484eb0",
+  "ixfac.json": "82c233399fb9260d8956c10d6d78b0bd6523c0492fab8c347e566bebbf4771d4"
+ },
+ "scope": {
+  "base_url": "https://www.peeringdb.com/api",
+  "countries": [
+   "DE"
+  ],
+  "region_continent": null,
+  "requested_at": "2026-10-28T00:00:00+00:00",
+  "synthetic": true
+ }
+}

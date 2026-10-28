@@ -1,0 +1,6 @@
+# Demo/replay config: SYNTHETIC snapshot + SYNTHETIC geocode cache, no network.
+geocoding:
+  cache_path: tests/fixtures/synthetic_geocode_cache.json
+paths:
+  snapshot_dir: /tmp/iris/snapshots
+  report_dir: /tmp/iris/reports

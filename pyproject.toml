@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iris-eu-peering"
+version = "0.1.0"
+description = "IRIS task 149 (IRIS-EU-PEERING): ingest PeeringDB Internet Exchange nodes into iris_staging"
+readme = "README.md"
+requires-python = ">=3.11"
+# Exact pins live in requirements.txt; ranges here keep `pip install -e .` flexible.
+dependencies = [
+    "requests>=2.32,<3",
+    "psycopg[binary]>=3.2,<4",
+    "PyYAML>=6.0,<7",
+]
+
+[project.scripts]
+iris-peering = "iris_peering.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+iris_peering = ["reference/*.json", "sql/*.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["postgis: needs a PostGIS database (set IRIS_TEST_DATABASE_URL)"]

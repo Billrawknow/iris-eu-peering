@@ -1,0 +1,78 @@
+1. Row/IX counts and location coverage (expect located/total close to 1, geom = located)
+ nodes | ixps | located | located_pct 
+-------+------+---------+-------------
+    11 |    8 |      10 |        90.9
+(1 row)
+
+2. Provenance mix (where each coordinate came from, and how accurate it is)
+    coord_source    |  coord_accuracy   | nodes | min_m | max_m 
+--------------------+-------------------+-------+-------+-------
+ geocoded_city      | city              |     5 | 15000 | 15000
+ peeringdb_facility | facility_reported |     3 |   100 |   100
+ geocoded_address   | building          |     2 |    50 |    50
+ none               | unknown           |     1 |       |      
+(4 rows)
+
+3. Not collapsed to one coordinate (expect distinct_points close to located, top_share small)
+ distinct_points | located | top_point_nodes | top_share 
+-----------------+---------+-----------------+-----------
+              10 |      10 |               1 |     0.100
+(1 row)
+
+4. CRS and geometry integrity (expect one row: srid 4326, all valid, no lat/lon mismatch)
+ srid | all_valid | mismatches 
+------+-----------+------------
+ 4326 | t         |          0
+(1 row)
+
+5. Duplicate identity check (expect 0 rows)
+ ix_id | fac_id | count 
+-------+--------+-------
+(0 rows)
+
+6. Per-country coverage, incl. cross-border facilities
+ node_country | nodes | located | cross_border 
+--------------+-------+---------+--------------
+ DE           |    10 |       9 |            0
+ NL           |     1 |       1 |            1
+(2 rows)
+
+7. Unlocated or downgraded nodes to review
+  node_id   |     ix_name      | node_city  | node_country |   coord_source   |                                   quality_flags                                    
+------------+------------------+------------+--------------+------------------+------------------------------------------------------------------------------------
+ ix:9007    | SYNTH-IX-NOWHERE | Synthville | DE           | none             | {no_facility_link,geocode_offline_miss:city,unlocated}
+ ixfac:8004 | SYNTH-IX-BER     | Berlin     | DE           | geocoded_address | {outside_country_bbox,lat_lon_swap_suspected,source_coordinates_rejected,geocoded}
+ ixfac:8005 | SYNTH-IX-HAM     | Hamburg    | DE           | geocoded_city    | {coordinates_null_island,source_coordinates_rejected,geocoded}
+ ixfac:8008 | SYNTH-IX-LEJ     | Leipzig    | DE           | geocoded_city    | {coordinates_partial,source_coordinates_rejected,geocoded}
+ ixfac:8009 | SYNTH-IX-STR     | Stuttgart  | DE           | geocoded_city    | {outside_country_bbox,source_coordinates_rejected,geocode_miss:address,geocoded}
+(5 rows)
+
+8. Rejected source records of the latest run
+ entity |         reason         | count 
+--------+------------------------+-------
+ ix     | duplicate_identical    |     1
+ ix     | duplicate_superseded   |     1
+ ix     | invalid_country_code   |     1
+ ix     | missing_or_invalid_id  |     1
+ ix     | missing_required:name  |     1
+ ix     | not_an_object          |     1
+ ix     | status_pending         |     1
+ ixfac  | duplicate_ix_fac_pair  |     1
+ ixfac  | missing_required:ix_id |     1
+ ixfac  | orphan_unknown_ix      |     1
+(10 rows)
+
+9. Run history (inputs digest identifies the exact raw snapshot used)
+                run_id                |  status   |       started_at       |          finished_at          | countries | snapshot_digest  | nodes 
+--------------------------------------+-----------+------------------------+-------------------------------+-----------+------------------+-------
+ 00000000-0000-4000-8000-000000000149 | succeeded | 2026-10-28 08:55:59+03 | 2026-10-28 08:55:59.284645+03 | ["DE"]    | 16584c11996224c1 | 11
+(1 row)
+
+10. Example screening use: IX nodes within 50 km of a candidate site (Frankfurt city centre)
+  node_id   |   ix_name    |         fac_name         |  coord_accuracy   | km  
+------------+--------------+--------------------------+-------------------+-----
+ ixfac:8003 | SYNTH-IX-FRA | SYNTH-DC Frankfurt North | building          | 2.2
+ ixfac:8002 | SYNTH-IX-FRA | SYNTH-DC Frankfurt West  | facility_reported | 3.2
+ ixfac:8001 | SYNTH-IX-FRA | SYNTH-DC Frankfurt East  | facility_reported | 3.9
+(3 rows)
+

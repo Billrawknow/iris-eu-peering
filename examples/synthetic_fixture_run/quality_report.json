@@ -1,0 +1,182 @@
+{
+ "run_id": "00000000-0000-4000-8000-000000000149",
+ "scope": {
+  "base_url": "https://www.peeringdb.com/api",
+  "countries": [
+   "DE"
+  ],
+  "region_continent": null,
+  "requested_at": "2026-10-28T00:00:00+00:00",
+  "synthetic": true
+ },
+ "snapshot_digest": "16584c11996224c14f64e72c3b28a4ba8cbe5eccb766fb00abf6644bd9d78405",
+ "output_digest": "5fd004a1284013825618d0ebe6551264c9d1c79f9839a3278d34b0e57967c6b3",
+ "counts": {
+  "ix_received": 15,
+  "ixfac_received": 12,
+  "fac_received": 8,
+  "ix_valid": 8,
+  "ixfac_valid": 9,
+  "fac_valid": 8,
+  "nodes": 11,
+  "rejects": 10
+ },
+ "coverage": {
+  "ix_total": 8,
+  "ix_with_located_node": 7,
+  "nodes_total": 11,
+  "nodes_located": 10,
+  "nodes_unlocated": 1,
+  "location_coverage_pct": 90.9,
+  "distinct_coordinates": 10,
+  "largest_shared_coordinate": {
+   "lat": 50.1188,
+   "lon": 8.7356,
+   "nodes": 1
+  }
+ },
+ "by_node_type": {
+  "ix_facility": 9,
+  "ix_city": 2
+ },
+ "by_coord_source": {
+  "peeringdb_facility": 3,
+  "geocoded_address": 2,
+  "geocoded_city": 5,
+  "none": 1
+ },
+ "by_coord_accuracy": {
+  "facility_reported": 3,
+  "building": 2,
+  "city": 5,
+  "unknown": 1
+ },
+ "cross_border_nodes": 1,
+ "per_country": {
+  "DE": {
+   "nodes": 10,
+   "located": 9
+  },
+  "NL": {
+   "nodes": 1,
+   "located": 1
+  }
+ },
+ "quality_flags": {
+  "coordinates_null_island": 1,
+  "coordinates_partial": 1,
+  "cross_border_facility": 1,
+  "facility_record_missing": 1,
+  "geocode_miss:address": 1,
+  "geocode_offline_miss:city": 1,
+  "geocoded": 7,
+  "lat_lon_swap_suspected": 1,
+  "no_facility_link": 2,
+  "outside_country_bbox": 2,
+  "source_coordinates_missing": 1,
+  "source_coordinates_rejected": 4,
+  "unlocated": 1
+ },
+ "rejects_by_reason": {
+  "ix:duplicate_identical": 1,
+  "ix:duplicate_superseded": 1,
+  "ix:invalid_country_code": 1,
+  "ix:missing_or_invalid_id": 1,
+  "ix:missing_required:name": 1,
+  "ix:not_an_object": 1,
+  "ix:status_pending": 1,
+  "ixfac:duplicate_ix_fac_pair": 1,
+  "ixfac:missing_required:ix_id": 1,
+  "ixfac:orphan_unknown_ix": 1
+ },
+ "rejects": [
+  {
+   "entity": "ix",
+   "source_id": 9001,
+   "reason": "duplicate_identical"
+  },
+  {
+   "entity": "ix",
+   "source_id": 9002,
+   "reason": "duplicate_superseded"
+  },
+  {
+   "entity": "ix",
+   "source_id": "abc",
+   "reason": "missing_or_invalid_id"
+  },
+  {
+   "entity": "ix",
+   "source_id": 9010,
+   "reason": "missing_required:name"
+  },
+  {
+   "entity": "ix",
+   "source_id": 9011,
+   "reason": "invalid_country_code"
+  },
+  {
+   "entity": "ix",
+   "source_id": 9012,
+   "reason": "status_pending"
+  },
+  {
+   "entity": "ix",
+   "source_id": null,
+   "reason": "not_an_object"
+  },
+  {
+   "entity": "ixfac",
+   "source_id": 8051,
+   "reason": "missing_required:ix_id"
+  },
+  {
+   "entity": "ixfac",
+   "source_id": 8050,
+   "reason": "orphan_unknown_ix"
+  },
+  {
+   "entity": "ixfac",
+   "source_id": 8099,
+   "reason": "duplicate_ix_fac_pair"
+  }
+ ],
+ "geocoding": {
+  "cache_hit": 8,
+  "network": 0,
+  "miss": 1,
+  "offline_miss": 1,
+  "error": 0
+ },
+ "load": {
+  "inserted": 11,
+  "updated_changed": 0,
+  "unchanged": 0,
+  "reactivated": 0,
+  "deactivated": 0,
+  "rejects_stored": 10
+ },
+ "acceptance_gates": {
+  "not_collapsed_to_single_coordinate": {
+   "pass": true,
+   "detail": "10 distinct coordinates for 10 located nodes; largest shared point holds 1 (10.0%), limit 50%"
+  },
+  "every_location_has_provenance": {
+   "pass": true,
+   "detail": "coord_source + accuracy + query/provider"
+  },
+  "unique_node_ids": {
+   "pass": true,
+   "detail": "11 nodes"
+  },
+  "coordinates_inside_country_reference": {
+   "pass": true,
+   "detail": "0 violations"
+  },
+  "fetch_complete": {
+   "pass": true,
+   "detail": "all API responses had a data array"
+  }
+ },
+ "all_gates_pass": true
+}
